@@ -17,7 +17,7 @@ export default function Room({ roomName }) {
     const [action, setAction] = useState([])
 
     function enter() {
-        if (name !== '') {
+        if (name !== '' && room.capacity - inRoom !== 0) {
             setInRoom(inRoom + 1)
             setAction([name + " entrou na sala", ...action])
             setName('')
