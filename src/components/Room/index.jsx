@@ -25,9 +25,11 @@ export default function Room({ roomName }) {
     }
 
     function createGroup() {
-        setGroupIn(group)
-        setAction([group + " foi criado", ...action])
-        setGroup('')
+        if (group !== ''){
+            setGroupIn(group)
+            setAction([group + " foi criado", ...action])
+            setGroup('')
+        }
     }
 
     const roomInfoProps = {
