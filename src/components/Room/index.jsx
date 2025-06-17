@@ -24,6 +24,14 @@ export default function Room({ roomName }) {
         }
     }
 
+    function out() {
+        if (name !== '' && room.capacity - inRoom !== 0) {
+            setInRoom(inRoom - 1)
+            setAction([name + " saiu da sala", ...action])
+            setName('')
+        }
+    }
+
     function createGroup() {
         if (group !== ''){
             setGroupIn(group)
@@ -48,6 +56,7 @@ export default function Room({ roomName }) {
                 <div className="form">
                     <input type="text" placeholder="Nome" value={name} onChange={(e) => setName(e.target.value)} className="inp"/>
                     <button onClick={enter} className="buttons">Entrar na sala</button> <br />
+                    <button onClick={out} className="buttons">Sair da sala</button> <br />
                     <input type="text" placeholder="Grupo" value={group} onChange={(e) => setGroup(e.target.value)} className="inp"/>
                     <button onClick={createGroup} className="buttons">Criar Grupo</button>
                 </div> <br />   
