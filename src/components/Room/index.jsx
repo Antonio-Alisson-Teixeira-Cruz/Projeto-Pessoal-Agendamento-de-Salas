@@ -54,10 +54,10 @@ export default function Room({ roomName }) {
             <div className="content">
                 <RoomInfo {...roomInfoProps} /> <br />
                 <div className="form">
-                    <input type="text" placeholder="Nome" value={name} onChange={(e) => setName(e.target.value)} className="inp"/>
-                    <button onClick={enter} className="buttons">Entrar na sala</button> <br />
+                    <input type="text" placeholder="Nome" value={name} onChange={(e) => setName(e.target.value)} className="inp"/> <br />
+                    <button onClick={enter} className="buttons">Entrar na sala</button> 
                     <button onClick={out} className="buttons">Sair da sala</button> <br />
-                    <input type="text" placeholder="Grupo" value={group} onChange={(e) => setGroup(e.target.value)} className="inp"/>
+                    <input type="text" placeholder="Grupo" value={group} onChange={(e) => setGroup(e.target.value)} className="inp"/> <br />
                     <button onClick={createGroup} className="buttons">Criar Grupo</button>
                 </div> <br />   
                 <div>
